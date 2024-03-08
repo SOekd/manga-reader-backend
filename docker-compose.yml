@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+
+  postgresql:
+    container_name: postgresql
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=p455w0rd
+    ports:
+      - "3306:3006"
+    volumes:
+      - ./docker/postgresql:/postgresql
+
+  keycloak:
+    container_name: keycloak
+    image: keycloak/keycloak:latest
+    ports:
+      - "2765:8080"
+    environment:
+      - KC_DB_PASSWORD=p455w0rd
+      - KC_DB_URL_PORT=3306
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=asdasdasd22
+    command: start-dev
+    depends_on:
+      - postgresql
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker/mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: p455w0rd
+      MONGO_INITDB_DATABASE: database

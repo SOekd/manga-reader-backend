@@ -1,0 +1,50 @@
+[versions]
+shadow = "8.1.1"
+spring-boot = "3.2.1"
+spring-dependency = "1.1.4"
+spring-cloud = "2023.0.0"
+spring-modulith = "1.1.0"
+discord4j = "3.3.0-RC1"
+pengrad-telegram = "6.9.1"
+openpdf = "1.3.35"
+ffmpeg = "0.8.0"
+commons-io = "2.15.1"
+zxing = "3.5.2"
+mapstruct = "1.5.5.Final"
+
+sejda-webp = "0.1.6"
+
+twelvemonkeys = "3.10.1"
+
+[libraries]
+shadow = { module = "com.github.johnrengelman:shadow", version.ref = "shadow" }
+spring-boot = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "spring-boot" }
+spring-dependency = { module = "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin", version.ref = "spring-dependency" }
+discord4j = { module = "com.discord4j:discord4j-core", version.ref = "discord4j" }
+pengrad-telegram = { module = "com.github.pengrad:java-telegram-bot-api", version.ref= "pengrad-telegram" }
+openpdf = { module = "com.github.librepdf:openpdf", version.ref= "openpdf" }
+ffmpeg = { module = "net.bramp.ffmpeg:ffmpeg", version.ref= "ffmpeg" }
+commons-io = { module = "commons-io:commons-io", version.ref= "commons-io" }
+zxing-java = { module = "com.google.zxing:javase", version.ref= "zxing" }
+zxing-core = { module = "com.google.zxing:core", version.ref= "zxing" }
+
+twelvemonkeys-jpeg = { module = "com.twelvemonkeys.imageio:imageio-jpeg", version.ref= "twelvemonkeys" }
+twelvemonkeys-bmp = { module = "com.twelvemonkeys.imageio:imageio-bmp", version.ref= "twelvemonkeys" }
+twelvemonkeys-hdr = { module = "com.twelvemonkeys.imageio:imageio-hdr", version.ref= "twelvemonkeys" }
+twelvemonkeys-icns = { module = "com.twelvemonkeys.imageio:imageio-icns", version.ref= "twelvemonkeys" }
+twelvemonkeys-iff = { module = "com.twelvemonkeys.imageio:imageio-iff", version.ref= "twelvemonkeys" }
+twelvemonkeys-pcx = { module = "com.twelvemonkeys.imageio:imageio-pcx", version.ref= "twelvemonkeys" }
+twelvemonkeys-pict = { module = "com.twelvemonkeys.imageio:imageio-pict", version.ref= "twelvemonkeys" }
+twelvemonkeys-pnm = { module = "com.twelvemonkeys.imageio:imageio-pnm", version.ref= "twelvemonkeys" }
+twelvemonkeys-psd = { module = "com.twelvemonkeys.imageio:imageio-psd", version.ref= "twelvemonkeys" }
+twelvemonkeys-sgi = { module = "com.twelvemonkeys.imageio:imageio-sgi", version.ref= "twelvemonkeys" }
+twelvemonkeys-tga = { module = "com.twelvemonkeys.imageio:imageio-tga", version.ref= "twelvemonkeys" }
+twelvemonkeys-thumbsdb = { module = "com.twelvemonkeys.imageio:imageio-thumbsdb", version.ref= "twelvemonkeys" }
+twelvemonkeys-tiff = { module = "com.twelvemonkeys.imageio:imageio-tiff", version.ref= "twelvemonkeys" }
+twelvemonkeys-webp = { module = "com.twelvemonkeys.imageio:imageio-webp", version.ref= "twelvemonkeys" }
+twelvemonkeys-xwd = { module = "com.twelvemonkeys.imageio:imageio-xwd", version.ref= "twelvemonkeys" }
+
+sejda-webp = { module = "org.sejda.imageio:webp-imageio", version.ref= "sejda-webp" }
+
+mapstruct-impl = { module = "org.mapstruct:mapstruct", version.ref="mapstruct" }
+mapstruct-annotation-processor = { module = "org.mapstruct:mapstruct-processor", version.ref="mapstruct" }

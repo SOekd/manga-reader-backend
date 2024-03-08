@@ -1,0 +1,12 @@
+server:
+  port: 9091
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:test@localhost:8090/eureka/
+
+
+spring:
+  application:
+    name: discord-storage

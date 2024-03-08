@@ -1,0 +1,13 @@
+server:
+  port: 8093
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:test@localhost:8090/eureka/
+
+
+spring:
+  application:
+    name: manga-service

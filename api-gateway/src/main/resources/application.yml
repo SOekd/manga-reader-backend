@@ -1,0 +1,48 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: discord-storage
+          uri: lb://discord-storage
+          predicates:
+            - Path=/api/v1/storage/discord/**
+        - id: pdf-service
+          uri: lb://pdf-service
+          predicates:
+            - Path=/api/v1/pdf/**
+        - id: video-service
+          uri: lb://video-service
+          predicates:
+            - Path=/api/v1/video/**
+        - id: compress-service
+          uri: lb://compress-service
+          predicates:
+            - Path=/api/v1/compress/**
+        - id: discovery-server
+          uri: http://admin:test@localhost:8090
+          predicates:
+            - Path=/eureka/web
+          filters:
+            - SetPath=/
+        - id: discovery-server-static
+          uri: http://admin:test@localhost:8090
+          predicates:
+            - Path=/eureka/**
+        - id: telegram-storage
+          uri: lb://telegram-storage
+          predicates:
+            - Path=/api/v1/storage/telegram/**
+        - id: manga-service
+          uri: lb://manga-service
+          predicates:
+            - Path=/api/v1/manga/**
